@@ -1,1 +1,93 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+header{
+    display: flex;
+    width: 100;
+    height: 50px;
+    background-color: #F5F5F6;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgb{
+    width: 89px;
+    height: 23px;
+}
+.list{
+    width: 50%;
+    list-style-type: none;
+    padding-left: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+.list li{
+    color: #959BA4;
+    font-weight: 500;
+    flex-direction: column;
+}
+.button{
+    font-weight: 500; 
+    width: 58px;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-weight: 700;
+    margin-left: 435px;
+    margin-top: 50px;
+    font-size: 36px;
+}
+.all{
+    display: flex;
+    justify-content: space-evenly;
+}
+.active{
+    color: black !important;
+}
+button{
+    width: 65px;
+    height: 35px;
+    font-size: 15px;
+    color:#c6c6c6;
+    background-color: transparent;
+    border: none;
+}
+.buttonkeeper{
+    margin-top: 15px;
+}
+#money{
+    border: none;
+    padding-bottom: 25px;
+    width: 240px;
+    height: 100px;
+    font-size: 36px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+tr th{
+    border: 1px solid #e5e5e5;
+}
+tr{
+    border-radius: 4px;
+}
+table{
+    border-collapse: collapse;
+}
+.change{
+    margin-top: 25px;
+    width: 265px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+p{
+    margin-top: 10px;
+}
