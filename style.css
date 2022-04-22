@@ -39,12 +39,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 h1{
     font-weight: 700;
-    margin-left: 435px;
+    margin-left: 350px;
     margin-top: 50px;
     font-size: 36px;
+    margin-bottom: 45px;
 }
 .all{
     display: flex;
@@ -53,41 +55,61 @@ h1{
 .active{
     color: black !important;
 }
-button{
-    width: 65px;
-    height: 35px;
-    font-size: 15px;
-    color:#c6c6c6;
-    background-color: transparent;
-    border: none;
-}
-.buttonkeeper{
-    margin-top: 15px;
-}
 #money{
     border: none;
-    padding-bottom: 25px;
-    width: 240px;
-    height: 100px;
-    font-size: 36px;
+    width: 225px;
+    margin: 8px 10px;
+    height: 50px;
+    font-size: 28px;
     font-weight: 700;
     padding-left: 10px;
-}
-tr th{
-    border: 1px solid #e5e5e5;
-}
-tr{
-    border-radius: 4px;
-}
-table{
-    border-collapse: collapse;
 }
 .change{
     margin-top: 25px;
     width: 265px;
+    height: 100px;
     border: 1px solid #e5e5e5;
     border-radius: 4px;
 }
 p{
-    margin-top: 10px;
+    margin-bottom: 10px;
+}
+span{
+    display: inline-flex;
+    border: 1px solid #e5e5e5;
+    color:#c6c6c6;
+    border-left: none;
+    width: 66px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+}
+span:first-child{
+    border-left: 1px solid #e5e5e5;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius:4px;
+}
+span:last-child{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px
+}
+.spankeeper{
+    display: flex;
+}
+.change p{
+    padding:10px 0 0 10px;
+    color:#c6c6c6;
+
+}
+.yourmoney p{
+    color: #9f9f9f;
+}
+.changeable p{
+    color: #9f9f9f;
+}
+.active1{
+    background-color:#833AE0;
+}
+.active2{
+    background-color:#833AE0;
 }

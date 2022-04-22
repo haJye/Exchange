@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,60 +9,66 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
     <div class="=container">
         <header>
             <img class="imgb" src="./img/bank.png" alt="Bank">
-            <ul class="list">
-                <li class="active">БАНК</li>
-                <li>БИЗНЕС</li>
-                <li>ИНВЕСТИЦИИ</li>
-                <li>СТРАХОВАНИЕ</li>
-                <li>МОБАЙЛ</li>
-                <li>ПУТЕШЕСТВИЯ</li>
-                <li>РАЗВЛЕЧЕНИЯ</li>
-            </ul>
+                <ul class="list">
+                    <li class="active">БАНК</li>
+                    <li>БИЗНЕС</li>
+                    <li>ИНВЕСТИЦИИ</li>
+                    <li>СТРАХОВАНИЕ</li>
+                    <li>МОБАЙЛ</li>
+                    <li>ПУТЕШЕСТВИЯ</li>
+                    <li>РАЗВЛЕЧЕНИЯ</li>
+                </ul>
             <p class="button"> ВОЙТИ </p>
         </header>
         <main>
             <h1>Конвертер валют онлайн</h1>
-            <div class="all">
-                <div class="yourmoney">
-                    <p>У меня есть  </p>
-                    <table class="buttonkeeper">
-                        <tr>
+                <div class="all">
+                 <div class="yourmoney">
+                        <p>У меня есть </p>
+                     <div class="spankeeper">
 
-                            <th> <button>RUB</button> </th> 
-                            <th> <button>USD</button> </th> 
-                            <th> <button>EUR</button> </th> 
-                            <th> <button>GBP</button> </th> 
+                        <span class="active1">RUB</span>
+                        <span>USD</span>
+                        <span>EUR</span>
+                        <span>GBP</span>
 
-                        </tr>
-                    </table>
+                     </div>
 
                     <div class="change">
                         <input type="number" name="value" id="money">
+                        <p>
+                            1 RUB = 0.0135 USD
+                        </p>
                     </div>
                     
                 </div>
+
                 <div class="changeable">
                     <p>Хочу приобрести</p>
-                    <table class="buttonkeeper">
-                        <tr>
+                    <div class="spankeeper">
 
-                            <th> <button>RUB</button> </th> 
-                            <th> <button>USD</button> </th> 
-                            <th> <button>EUR</button> </th> 
-                            <th> <button>GBP</button> </th> 
-                            
-                        </tr>
-                    </table>
-                    
-                    <div class="change">
-                        <input type="number" name="value" id="money">
+                        <span>RUB</span>
+                        <span class="active2">USD</span>
+                        <span>EUR</span>
+                        <span>GBP</span>
+
                     </div>
 
+                    <div class="change">
+                        <input type="number" name="value" id="money">
+                        <p>
+                            1 USD = 73.8896 RUB
+                        </p>
+                    </div>
+
+
                 </div>
+
             </div>
         </main>
 
@@ -81,4 +88,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
