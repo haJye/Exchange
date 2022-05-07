@@ -6,6 +6,9 @@ let inputSecond = document.querySelectorAll("input")[1];
 
 let footer = document.querySelectorAll("p")[2];
 let footer1 = document.querySelectorAll("p")[4];
+
+let errorMsg = document.querySelectorAll("p")[5];
+console.log(errorMsg)
 console.log(footer.innerHTML);
 console.log(footer1.innerHTML);
 // footer.innerHTML=`1${value1}=${value2}`
@@ -90,7 +93,8 @@ const getData = async (from, to) => {
     let data = await fetch(
         `https://api.exchangerate.host/latest?base=${from}&symbols=${to}`
     ).catch(err=>{
-        console.log(`Internete bagli deyilsiniz :${err.message}`)
+        console.log(err.message)
+        errorMsg.innerHTML=`Please check your internet connection`
     })
     let response = await data.json();
     return response;
@@ -99,7 +103,8 @@ const getData1 = async (from, to) => {
     let data = await fetch(
         `https://api.exchangerate.host/latest?base=${to}&symbols=${from}`
     ).catch(err=>{
-        console.log(`Internete bagli deyilsiniz :${err.message}`)
+        console.log(err.message)
+        errorMsg.innerHTML=`Please check your internet connection`
     })
     let response = await data.json();
     return response;
