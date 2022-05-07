@@ -58,33 +58,49 @@ btn2.slice(4, 8).forEach((item) => {
 //!Currency change for first tab
 
 inputFirst.addEventListener("keyup", (e) => {
+    if(value1===value2){
+        inputFirst.value=inputFirst.value;
+        inputSecond.value=inputFirst.value
+    }
+    else{
     getData(value1, value2).then((res) => {
         // console.log(res)
         inputSecond.value = (inputFirst.value * res.rates[value2]);
         // console.log(res.rates[value2])
     });
+}
 });
 
-//!Currency change for second tab but not work now
+//!Currency change for second tab
 inputSecond.addEventListener("keyup", (e) => {
+    if(value1===value2){
+        inputSecond.value=inputSecond.value
+        inputFirst.value=inputSecond.value;
+    }
+    else{
     getData1(value1, value2).then((res) => {
         // console.log(res)
 
         inputFirst.value = (inputSecond.value * res.rates[value1]);
         // console.log(res.rates[value1])
     });
+}
 });
 const getData = async (from, to) => {
     let data = await fetch(
         `https://api.exchangerate.host/latest?base=${from}&symbols=${to}`
-    );
+    ).catch(err=>{
+        console.log(`Internete bagli deyilsiniz :${err.message}`)
+    })
     let response = await data.json();
     return response;
 };
 const getData1 = async (from, to) => {
     let data = await fetch(
         `https://api.exchangerate.host/latest?base=${to}&symbols=${from}`
-    );
+    ).catch(err=>{
+        console.log(`Internete bagli deyilsiniz :${err.message}`)
+    })
     let response = await data.json();
     return response;
 };
