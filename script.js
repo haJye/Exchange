@@ -17,6 +17,9 @@ console.log(footer1.innerHTML);
 
 //!First 4 value for change
 
+inputFirst.value=0;
+inputSecond.value=0;
+
 let btn1 = [...document.querySelectorAll("span")];
 btn1.slice(0, 4).forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -31,9 +34,8 @@ btn1.slice(0, 4).forEach((item) => {
         value2 = value2[0].innerText;
         console.log(value2);
         getData(value1, value2).then((res) => {
-            inputFirst.value = 1;
-            inputSecond.value = Number(res.rates[value2]);
-            inputFirst.value = (inputFirst.value * res.rates[value2]);
+            // inputSecond.value = Number(res.rates[value2]);
+            // inputFirst.value = (inputFirst.value * res.rates[value2]);
             console.log(res.rates[value2]);
             footer.innerHTML = `1 ${value1}  = ${res.rates[value2]}${value2}`;
             footer1.innerHTML = `1 ${value2} = ${res.rates[value2]}${value2}`;
@@ -90,6 +92,11 @@ inputSecond.addEventListener("keyup", (e) => {
 }
 });
 const getData = async (from, to) => {
+    if(value1===value2){
+        inputFirst.value=inputFirst.value;
+        inputSecond.value=inputFirst.value
+    }
+    else{
     let data = await fetch(
         `https://api.exchangerate.host/latest?base=${from}&symbols=${to}`
     ).catch(err=>{
@@ -98,8 +105,13 @@ const getData = async (from, to) => {
     })
     let response = await data.json();
     return response;
-};
+}};
 const getData1 = async (from, to) => {
+    if(value1===value2){
+        inputSecond.value=inputSecond.value
+        inputFirst.value=inputSecond.value;
+    }
+    else{
     let data = await fetch(
         `https://api.exchangerate.host/latest?base=${to}&symbols=${from}`
     ).catch(err=>{
@@ -108,4 +120,4 @@ const getData1 = async (from, to) => {
     })
     let response = await data.json();
     return response;
-};
+}};
